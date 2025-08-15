@@ -129,9 +129,8 @@ function saveResultsToHistory(results) {
   return history;
 }
 
-export {
-  handleBulkUpload,
-  parseCSVFile,
-  processVPRData,
-  saveResultsToHistory
-};
+// Expose functions in browser global for static usage
+window.handleBulkUpload = handleBulkUpload;
+window.parseCSVFile = parseCSVFile;
+window.processVPRData = processVPRData;
+window.saveResultsToHistory = saveResultsToHistory;

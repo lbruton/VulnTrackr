@@ -1,0 +1,30 @@
+# macOS
+.DS_Store
+
+# Node
+node_modules/
+
+# Local data and build artifacts
+data/
+dist/
+build/
+
+# Logs
+npm-debug.log*
+package-lock.json
+yarn.lock
+
+# Editor directories and files
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.bak
+
+# CSV history (keeps sample files but ignore added data)
+csvhistory/*.csv
+
+# Ignore potentially sensitive exported history
+vpr-history-*.json
+

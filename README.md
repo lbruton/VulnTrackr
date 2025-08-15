@@ -202,3 +202,17 @@ async function secureExport(data, password) {
 GNU General Public License v3.0 - see LICENSE file for details
 
 Copyright © 2025 Lonnie Bruton. This is free and open source software.
+
+## Publishing to GitHub Pages
+
+This repository can be published as a static site using GitHub Pages. The project includes a GitHub Actions workflow at `.github/workflows/pages.yml` which will publish the repository root to the `gh-pages` branch whenever you push to `main`.
+
+Quick steps:
+
+1. Push your code to the `main` branch.
+2. The action will run and publish the repository root to the `gh-pages` branch.
+3. In your repository Settings -> Pages, set the source to the `gh-pages` branch (root) and enable the site.
+
+Notes:
+- The app is a static frontend and runs directly from `index.html`. No build step is required.
+- If you later add a build step (for example a bundler), update `publish_dir` in the workflow to point to the build output directory.
