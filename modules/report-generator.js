@@ -285,6 +285,7 @@ function downloadHTMLReport(history) {
   URL.revokeObjectURL(url);
 }
 
-// Expose report helpers to browser global
-window.generateHTMLReport = generateHTMLReport;
-window.downloadHTMLReport = downloadHTMLReport;
+export {
+  generateHTMLReport,
+  downloadHTMLReport
+};

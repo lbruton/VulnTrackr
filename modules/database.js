@@ -95,6 +95,7 @@ CMD ["nginx", "-g", "daemon off;"]
   `;
 }
 
-// Expose API on window for browser usage
-window.initDatabase = initDatabase;
-window.getDockerPersistenceInstructions = getDockerPersistenceInstructions;
+export {
+  initDatabase,
+  getDockerPersistenceInstructions
+};
