@@ -1,0 +1,35 @@
+{
+  "name": "VulnTrackr", 
+  "rAgentsRepo": "https://github.com/lbruton/rAgents.git",
+  "agentPath": "agents/vulntrackr/",
+  "memoryPath": "memory/vulntrackr/",
+  "docsPath": "docs/roadmaps/vulntrackr.md",
+  "protocols": {
+    "initialization": "agents/universal/onboarding.md",
+    "projectSpecific": "agents/vulntrackr/protocols.md",
+    "memory": "memory/vulntrackr/latest.json",
+    "roadmap": "docs/roadmaps/vulntrackr.md"
+  },
+  "memoryPriority": {
+    "primary": "VulnTrackr",
+    "secondary": ["StackTrackr", "rEngine"],
+    "contextFilter": {
+      "relevanceThreshold": 0.7,
+      "projectFocus": "vulnerability_tracking",
+      "allowCrossProject": true,
+      "priorityKeywords": ["vulnerability", "security", "tracking", "VPR", "CVE"],
+      "excludeKeywords": ["precious_metals", "inventory_metals", "stacktrackr_specific"]
+    },
+    "memoryRanking": {
+      "local": 1.0,
+      "crossProject": 0.6,
+      "universal": 0.8
+    }
+  },
+  "syncCommands": {
+    "push": "./scripts/sync_to_ragents.sh",
+    "pull": "./scripts/sync_from_ragents.sh"
+  },
+  "lastSync": null,
+  "version": "1.1.0"
+}
